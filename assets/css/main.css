@@ -6,6 +6,23 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+/* Estilos de la portada */
+.portada {
+    position: relative;
+    height: 100vh; /* Establece la altura de la portada al 100% de la ventana */
+    width: 100%; /* Ancho completo */
+    overflow: hidden;
+}
+
+.portada img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ancho completo */
+    height: auto;
+    z-index: -1; /* Asegúrate de que la imagen esté detrás del contenido */
+}
+
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
