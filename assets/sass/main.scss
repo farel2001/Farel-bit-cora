@@ -73,3 +73,42 @@
 	@import 'layout/footer';
 	@import 'layout/wrapper';
 	@import 'layout/menu';
+	
+	<style>
+			/* Week Navigation Styles */
+			.week-navigation {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 50px 0;
+			}
+	
+			#week-select {
+				padding: 10px;
+				font-size: 16px;
+				margin-right: 20px;
+				margin-left: 20px;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+			}
+	
+			.buttons {
+				display: flex;
+				gap: 3px;
+			}
+	
+			.btn {
+				padding: 5px 20px;
+				margin-right: 20px;
+				background-color: #242dac; /* Cambia este color según la estética de tu página */
+				color: #fff;
+				text-decoration: none;
+				border-radius: 10px;
+				display: flex;
+				align-items: center;
+			}
+	
+			.btn:hover {
+				background-color: #29a5c4;
+			}
+		</style>

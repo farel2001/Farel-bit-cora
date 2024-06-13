@@ -11,6 +11,44 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Week Navigation Styles */
+			.week-navigation {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 50px 0;
+			}
+	
+			#week-select {
+				padding: 10px;
+				font-size: 16px;
+				margin-right: 20px;
+				margin-left: 20px;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+			}
+	
+			.buttons {
+				display: flex;
+				gap: 3px;
+			}
+	
+			.btn {
+				padding: 5px 20px;
+				margin-right: 20px;
+				background-color: #242dac; /* Cambia este color según la estética de tu página */
+				color: #fff;
+				text-decoration: none;
+				border-radius: 10px;
+				display: flex;
+				align-items: center;
+			}
+	
+			.btn:hover {
+				background-color: #29a5c4;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -153,7 +191,31 @@
 							</section>
 						</div>
 					</section>
-				-->
+				--> <!-- Week Navigation -->
+				<div class="week-navigation">
+					<select id="week-select" onchange="location = this.value;">
+						<option value="Semana 01.html">Semana 01</option>
+						<option value="Semana 02.html" selected>Semana 02</option>
+						<option value="Semana 03.html">Semana 03</option>
+						<option value="Semana 04.html">Semana 04</option>
+						<option value="Semana 05.html">Semana 05</option>
+						<option value="Semana 06.html">Semana 06</option>
+						<option value="Semana 07.html">Semana 07</option>
+						<option value="Semana 08.html">Semana 08</option>
+						<option value="Semana 09.html">Semana 09</option>
+						<option value="Semana 10.html">Semana 10</option>
+						<option value="Semana 11.html">Semana 11</option>
+						<option value="Semana 12.html">Semana 12</option>
+						<option value="Semana 13.html">Semana 13</option>
+						<option value="Semana 14.html">Semana 14</option>
+						<option value="Semana 15.html">Semana 15</option>
+						<!-- Agrega más semanas según sea necesario -->
+					</select>
+					<div class="buttons">
+						<a href="Semana 01.html" class="btn prev">&larr; Semana Anterior</a>
+						<a href="Semana 03.html" class="btn next">Semana Siguiente &rarr;</a>
+					</div>
+				</div>
 
 				<!-- Footer -->
 					<footer id="footer">
