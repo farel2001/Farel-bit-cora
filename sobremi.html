@@ -11,6 +11,48 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>/* Estilos para el carrusel */
+			#carrusel {
+			  width: 1078px;
+			  margin: 0 auto;
+			  overflow: hidden; /* Para evitar que las imágenes se salgan del contenedor */
+			}
+			
+			.carrusel-inner {
+			  display: flex;
+			  width: calc(100% - 20px); /* Ancho del contenido, menos margen izquierdo y derecho */
+			  transition: transform 0.5s; /* Animación para el movimiento del carrusel */
+			  position: relative; /* Agregamos position relative para que podamos utilizar z-index */
+			}
+			
+			.carrusel-inner img {
+			  width: 100%; /* Ancho de las imágenes */
+			  height: 100vh; /* Alto de las imágenes */
+			}
+			
+			/* Estilos adicionales para mostrar la imagen actual */
+			.current-image {
+			  transform: translateX(0); /* Posición inicial de la imagen actual */
+			  z-index: 1; /* Agregamos z-index para colocar la imagen actual en frente de las demás */
+			}
+			
+			/* Estilos adicionales para ocultar las imágenes no visibles */
+			.not-visible {
+			  transform: translateX(-100%);
+			  z-index: -1; /* Agregamos z-index negativo para colocar las imágenes no visibles detrás de la actual */
+			}
+			.carrusel-inner img {
+  width: calc(100% - 20px); /* Ancho de las imágenes, menos margen izquierdo y derecho */
+  height: calc(100vh - 20px); /* Alto de las imágenes, menos margen superior y inferior */
+  object-fit: cover; /* Agregamos object-fit: cover para ajustar el tamaño de las imágenes */
+}
+.carrusel-inner img {
+  max-width: 1000px; /* Ancho máximo de las imágenes */
+  max-height: 1000px; /* Alto máximo de las imágenes */
+}
+</style>
+	
+		
 	</head>
 	<body class="is-preload">
 
@@ -60,7 +102,19 @@
 									<p>Un dato más reciente es que estuve trabajando los últimos 6 meses en una agencia de diseño, donde gané más experiencia y conocimiento de cómo es el sistema de trabajo y como tambíen el trabajo depende mucho de estar en contacto con otras personas; a su vez me ayuda a desenvolverme como persona en el mundo, debo decir que fue una experiencia muy buena. </p>
 								</div>
 							</section>	
+							<!-- El contenedor del carrusel -->
+<div id="carrusel" style="width: 1078px; margin: 0 auto;">
+	<!-- El contenido del carrusel -->
+	<div class="carrusel-inner">
+	  <img src="images/C1.jpg" alt="Imagen 1">
+	  <img src="images/C2.jpg" alt="Imagen 2">
+	  <img src="images/C3.png" alt="Imagen 3">
+	  <!-- Agrega más imágenes aquí -->
+	</div>
+  </div>
+			
 
+							
 				<!-- Contact -->
 					<section id="contact">
 						<div class="inner">
@@ -75,6 +129,7 @@
 								</form>
 						</div>
 					</section>
+
 
 				<!-- Footer -->
 					<footer id="footer">
@@ -102,6 +157,29 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				// Seleccionar el elemento del carrusel
+var carrusel = document.getElementById('carrusel');
+var inner = carrusel.querySelector('.carrusel-inner');
+var images = inner.children;
+var currentImage = 0;
 
+// Inicializar el carrusel
+function initCarrusel() {
+  inner.style.transform = 'translateX(0)';
+}
+
+// Actualizar el carrusel
+function updateCarrusel() {
+  inner.style.transform = 'translateX(-' + (currentImage * inner.offsetWidth) + 'px)';
+  currentImage = (currentImage + 1) % images.length;
+  setTimeout(updateCarrusel, 5000); // Cambia la imagen cada 5 segundos
+}
+
+// Inicializar el carrusel y automatizarlo
+initCarrusel();
+updateCarrusel();
+			</script>
+			
 	</body>
 </html>
