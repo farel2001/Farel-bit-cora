@@ -50,6 +50,24 @@
   max-width: 1000px; /* Ancho máximo de las imágenes */
   max-height: 1000px; /* Alto máximo de las imágenes */
 }
+.carousel {
+  position: relative; /* o absolute */
+}
+
+.carousel-inner {
+  position: relative;
+}
+
+.carousel-item {
+  position: absolute; /* o relative */
+  z-index: 1; /* o cualquier valor positivo */
+  margin: 10px; /* o cualquier valor */
+}
+
+.carousel-item img {
+  width: 80%; /* o cualquier valor */
+  height: auto;
+}
 </style>
 	
 		
@@ -102,17 +120,54 @@
 									<p>Un dato más reciente es que estuve trabajando los últimos 6 meses en una agencia de diseño, donde gané más experiencia y conocimiento de cómo es el sistema de trabajo y como tambíen el trabajo depende mucho de estar en contacto con otras personas; a su vez me ayuda a desenvolverme como persona en el mundo, debo decir que fue una experiencia muy buena. </p>
 								</div>
 							</section>	
+							<!-- One -->
+						<section id="one">
+							<div class="inner">
+								<header class="major">
+									<h1>Mis gustos</h1>
+								</header>
 							<!-- El contenedor del carrusel -->
-<div id="carrusel" style="width: 1078px; margin: 0 auto;">
+<div id="carrusel" style="width: 1400px; margin: 0 auto;">
 	<!-- El contenido del carrusel -->
 	<div class="carrusel-inner">
 	  <img src="images/C1.jpg" alt="Imagen 1">
 	  <img src="images/C2.jpg" alt="Imagen 2">
 	  <img src="images/C3.png" alt="Imagen 3">
+	  <img src="images/C4.jpg" alt="Imagen 4">
+	  <img src="images/C5.jpg" alt="Imagen 5">
+	  <img src="images/C6.jpeg" alt="Imagen 6">
+	  <img src="images/c7.jpg" alt="Imagen 7">
 	  <!-- Agrega más imágenes aquí -->
 	</div>
-  </div>
-			
+
+
+	</div>
+
+<SEction>
+
+	<p>
+		<P></P>Aquí quiero compartir un poco algunas portadas de albums que me gustan mas o menos para entender el tipo de música que me gusta, la verdad creo que me gusta el pop pero en especial canciones que lentas o letras que cuenten historias o melodias que te hagan sentir estar en un escapismo de la realidad, también disfruto mucho de canciones movidas con instrumentos fuertes, usualmente escucho también bastante las bandas sonoras especialmente de animes, algunas peliculas y también de canciones clásicas o actos de ballet, siento que son muy relajantes.
+</div>
+</section>	
+				<!-- One -->
+				<section id="one">
+					<div class="inner">
+						<header class="major">
+							<h1>Otros datos recientes</h1>
+						</header>
+						<span class="image main"><img src="images/miku final hatsune2.png" alt="" /></span>
+
+
+
+
+
+
+<p>
+<P></P>Bueno aca unos últimos datos: Me gusta dibujar y sobretodo pintar, creo que mi color favorito es el azul (creo que es muy evidente), estoy viendo todo dragon ball de nuevo, me gusta scooby doo misterios S.A y Avatar la leyenda de Aang y Korra, ya vi intensamente 2 y me gustó bastante, por ahora ando estresado con todos mis cursos pero ya pronto acabaré la carrera acabando estas semanas, una de mis canciones mas escuchadas es Lavander Haze, me gusta dormir, sé cocinar muy bien, al acabar tengo pensado hacer un negocio de mermelada.
+</div>
+</section>	
+	
+
 
 							
 				<!-- Contact -->
@@ -173,7 +228,7 @@ function initCarrusel() {
 function updateCarrusel() {
   inner.style.transform = 'translateX(-' + (currentImage * inner.offsetWidth) + 'px)';
   currentImage = (currentImage + 1) % images.length;
-  setTimeout(updateCarrusel, 5000); // Cambia la imagen cada 5 segundos
+  setTimeout(updateCarrusel, 2000); // Cambia la imagen cada 5 segundos
 }
 
 // Inicializar el carrusel y automatizarlo
